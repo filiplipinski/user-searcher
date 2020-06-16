@@ -1,12 +1,15 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import * as theme from 'theme';
+import UserSearcher from 'modules/UserSearcher';
 import * as S from './styled';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <S.GlobalStyles />
-      <p>Hello World!</p>
-    </div>
+      <UserSearcher />
+    </ThemeProvider>
   );
 };
 

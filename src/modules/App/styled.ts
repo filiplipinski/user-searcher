@@ -2,8 +2,6 @@ import { createGlobalStyle } from 'styled-components/macro';
 import { colors } from 'theme';
 
 export const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap&subset=latin-ext');
-
   *,
   *:before,
   *:after {
