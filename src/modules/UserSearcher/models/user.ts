@@ -19,11 +19,7 @@ export type User = {
   };
   phone: string;
   website: string;
-  company: {
-    name: string;
-    catchPhrase: string;
-    bs: string;
-  };
+  company: { s; name: string; catchPhrase: string; bs: string };
 };
 
 const API_URL = 'https://jsonplaceholder.typicode.com/users';

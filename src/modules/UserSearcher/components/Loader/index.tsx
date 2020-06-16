@@ -1,5 +1,7 @@
 import React from 'react';
 import { HookData } from 'utils/createHook';
+import LoadingCircle from './LoadingCircle';
+import * as S from './styled';
 
 interface Props {
   asyncData: HookData<any>;
@@ -9,9 +11,10 @@ interface Props {
 const Loader: React.FC<Props> = ({ children, asyncData }) => {
   const { called, loading, data, error } = asyncData;
 
-  const renderData = data && !error ? children({ data, error }) : <p>Failed to fetch data</p>;
+  const renderData =
+    data && !error ? children({ data, error }) : <S.Error>Failed to fetch data</S.Error>;
 
-  return <div>{called && loading ? <div>Loading...</div> : renderData}</div>;
+  return <div>{called && loading ? <LoadingCircle /> : renderData}</div>;
 };
 
 export default Loader;

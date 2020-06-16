@@ -15,11 +15,13 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    font-size: 1.6rem;
+    height: 100%;
+    margin: 0;
     font-family: 'Montserrat', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 1.6rem;
-    height: 100%;
-    background-color: ${colors.background};
+    color: ${colors.mainFontColor};
+    background-color: ${colors.background};   
   }
 `;

@@ -14,17 +14,17 @@ const UserSearcher: React.FC = () => {
   }, [users.data]);
 
   return (
-    <S.Wrapper>
-      <h1>Users list</h1>
+    <>
+      <S.Header>Users list</S.Header>
       <Loader asyncData={users}>
-        {({ data }: { data: User[] }) => (
-          <>
-            <SearchField data={data} onChange={(val) => setFilteredUsers(val)} />
+        {() => (
+          <S.Box>
+            <SearchField data={users.data || []} onChange={(val) => setFilteredUsers(val)} />
             <UsersList data={filteredUsers} />
-          </>
+          </S.Box>
         )}
       </Loader>
-    </S.Wrapper>
+    </>
   );
 };
 
